@@ -4,9 +4,35 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HiHoga"
+        xmlns:vm="clr-namespace:HiHoga.ViewModels"
+        xmlns:view="clr-namespace:HiHoga.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+            <Button Style="{DynamicResource MaterialDesignFlatAccentButton}" Content="Test" Width="80" Height="30" Command="{Binding BtnTest}"/>
+            <Button Style="{DynamicResource MaterialDesignFlatAccentButton}" Content="Test" Width="80" Height="30" Command="{Binding BtnTest}"/>
+            <Button Style="{DynamicResource MaterialDesignFlatAccentButton}" Content="Test" Width="80" Height="30" Command="{Binding BtnTest}"/>
+            <Button Style="{DynamicResource MaterialDesignFlatAccentButton}" Content="Test" Width="80" Height="30" Command="{Binding BtnTest}"/>
+            <!--<md:Card Padding="32" Margin="16">
+                <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">MApp</TextBlock>
+            </md:Card>-->
+        </StackPanel>
+
+        <view:HogaPlayView Grid.Row="2" Grid.Column="1" DataContext="{Binding HogaPlayViewModel}"/>
     </Grid>
 </Window>

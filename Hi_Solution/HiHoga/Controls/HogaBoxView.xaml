@@ -1,0 +1,281 @@
+﻿<UserControl x:Class="HiHoga.Controls.HogaBoxView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HiHoga.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="210"/>
+            <RowDefinition Height="210"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Height" Value="20"/>
+                    <Setter Property="TextAlignment" Value="Left"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Text="{Binding HogaData.Sell_diff[9]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_diff[8]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_diff[7]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_diff[6]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_diff[5]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_diff[4]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_diff[3]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_diff[2]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_diff[1]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_diff[0]}"/>
+            <Label Height="1"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type ProgressBar}">
+                    <Setter Property="Foreground" Value="Aqua"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Height" Value="20"/>
+                    <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+                    <Setter Property="ProgressBar.RenderTransform">
+                        <Setter.Value>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="180"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </StackPanel.Resources>
+            <Grid>
+                <ProgressBar Value="50"/>
+                <TextBlock Text="{Binding HogaData.Sell_stack[9]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Sell_stack[8]}"/>
+                <TextBlock Text="{Binding HogaData.Sell_stack[8]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Sell_stack[7]}"/>
+                <TextBlock Text="{Binding HogaData.Sell_stack[7]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Sell_stack[6]}"/>
+                <TextBlock Text="{Binding HogaData.Sell_stack[6]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Sell_stack[5]}"/>
+                <TextBlock Text="{Binding HogaData.Sell_stack[5]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Sell_stack[4]}"/>
+                <TextBlock Text="{Binding HogaData.Sell_stack[4]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Sell_stack[3]}"/>
+                <TextBlock Text="{Binding HogaData.Sell_stack[3]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Sell_stack[2]}"/>
+                <TextBlock Text="{Binding HogaData.Sell_stack[2]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Sell_stack[1]}"/>
+                <TextBlock Text="{Binding HogaData.Sell_stack[1]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Sell_stack[0]}"/>
+                <TextBlock Text="{Binding HogaData.Sell_stack[0]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="2">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Height" Value="20"/>
+                    <Setter Property="TextAlignment" Value="Center"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Text="{Binding HogaData.Sell_price[9]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_price[8]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_price[7]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_price[6]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_price[5]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_price[4]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_price[3]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_price[2]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_price[1]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Sell_price[0]}"/>
+            <Label Height="1"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Height" Value="20"/>
+                    <Setter Property="TextAlignment" Value="Center"/>
+                </Style>
+            </StackPanel.Resources>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_price[0]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_price[1]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_price[2]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_price[3]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_price[4]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_price[5]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_price[6]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_price[7]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_price[8]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_price[9]}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="3">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type ProgressBar}">
+                    <Setter Property="Foreground" Value="PeachPuff"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Height" Value="20"/>
+                </Style>
+            </StackPanel.Resources>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Buy_stack[0]}"/>
+                <TextBlock Text="{Binding HogaData.Buy_stack[0]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Buy_stack[1]}"/>
+                <TextBlock Text="{Binding HogaData.Buy_stack[1]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Buy_stack[2]}"/>
+                <TextBlock Text="{Binding HogaData.Buy_stack[2]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Buy_stack[3]}"/>
+                <TextBlock Text="{Binding HogaData.Buy_stack[3]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Buy_stack[4]}"/>
+                <TextBlock Text="{Binding HogaData.Buy_stack[4]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Buy_stack[5]}"/>
+                <TextBlock Text="{Binding HogaData.Buy_stack[5]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Buy_stack[6]}"/>
+                <TextBlock Text="{Binding HogaData.Buy_stack[6]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Buy_stack[7]}"/>
+                <TextBlock Text="{Binding HogaData.Buy_stack[7]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Buy_stack[8]}"/>
+                <TextBlock Text="{Binding HogaData.Buy_stack[8]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Label Height="1"/>
+            <Grid>
+                <ProgressBar Value="{Binding HogaData.Percent_Buy_stack[9]}"/>
+                <TextBlock Text="{Binding HogaData.Buy_stack[9]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="1" Grid.Column="4">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Height" Value="20"/>
+                    <Setter Property="TextAlignment" Value="Left"/>
+                </Style>
+            </StackPanel.Resources>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_diff[0]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_diff[1]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_diff[2]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_diff[3]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_diff[4]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_diff[5]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_diff[6]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_diff[7]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_diff[8]}"/>
+            <Label Height="1"/>
+            <TextBlock Text="{Binding HogaData.Buy_diff[9]}"/>
+        </StackPanel>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding HogaData.Sell_totalDiff}" TextAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding HogaData.Sell_totalStack}" TextAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding CurTimeStamp}" TextAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="3" Text="{Binding HogaData.Buy_totalStack}" TextAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="4" Text="{Binding HogaData.Buy_totalDiff}" TextAlignment="Center"/>
+
+    </Grid>
+</UserControl>
