@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiHoga", "HiHoga\HiHoga.csproj", "{4E5E9FDE-4C0B-46C8-B668-49E7384B609D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiPooh", "HiPooh\HiPooh.csproj", "{B8843D6C-7220-45BA-97BB-7FEE472D4EE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E5E9FDE-4C0B-46C8-B668-49E7384B609D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E5E9FDE-4C0B-46C8-B668-49E7384B609D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E5E9FDE-4C0B-46C8-B668-49E7384B609D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E5E9FDE-4C0B-46C8-B668-49E7384B609D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8843D6C-7220-45BA-97BB-7FEE472D4EE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8843D6C-7220-45BA-97BB-7FEE472D4EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8843D6C-7220-45BA-97BB-7FEE472D4EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8843D6C-7220-45BA-97BB-7FEE472D4EE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4B0DB51-5563-48BB-BD3C-E30C7D8B1055}
+	EndGlobalSection
+EndGlobal
